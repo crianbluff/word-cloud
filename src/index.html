@@ -12,5 +12,24 @@
 
     <app-root></app-root>
 
+    <script>
+
+        window.addEventListener("hashchange", function() { change() }, false);
+        window.addEventListener("click", function() { change() }, false);
+        
+        function change() {
+          setTimeout(function(){
+            if ( window.location.hash === '#/words' ) {
+              document.body.style.backgroundImage = "url('assets/img/background.jpg')";
+            } else {
+                return;
+              }
+      
+          }, 100);
+        }
+          
+        (change) ();
+          
+      </script>
   </body>
 </html>

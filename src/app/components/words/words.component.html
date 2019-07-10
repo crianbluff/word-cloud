@@ -1,35 +1,43 @@
+<h4 class="center title-form">
+Responde la pregunta y haz clic en enviar.
+</h4>
+
 <form (ngSubmit)="enviar()" #forma="ngForm">
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="pelicula">
-      Pelicula
+      ¿Cuál es tu película favorita?
     </label>
-    <input type="text" name="pelicula" id="pelicula" class="form-control" placeholder="Pelicula" required="required" [(ngModel)]="ask.pelicula">
-  </div>
+    <i class="fa fa-pencil"></i>
+    <input type="text" name="pelicula" id="pelicula" class="form-control" required="required" [(ngModel)]="ask.pelicula">
+  </div> -->
 
   <div class="form-group">
     <label for="color">
-      Color
+      ¿Cuál es tu color favorito?
     </label>
-    <input type="text" name="color" id="color" class="form-control" placeholder="Color" required="required" [(ngModel)]="ask.color">
+    <i class="fa fa-pencil"></i>
+    <input type="text" name="color" id="color" class="form-control" required="required" [(ngModel)]="ask.color">
   </div>
 
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="juego">
-      Juego
+      ¿Cuál es tu juego favorito?
     </label>
-    <input type="text" name="juego" id="juego" class="form-control" placeholder="Juego" required="required" [(ngModel)]="ask.juego">
+    <i class="fa fa-pencil"></i>
+    <input type="text" name="juego" id="juego" class="form-control" required="required" [(ngModel)]="ask.juego">
   </div>
 
   <div class="form-group">
     <label for="pais">
-      País
+      ¿En qué país te encuentras?
     </label>
-    <input type="text" name="pais" id="pais" class="form-control" placeholder="Pais" required="required" [(ngModel)]="ask.pais">
-  </div>
+    <i class="fa fa-pencil"></i>
+    <input type="text" name="pais" id="pais" class="form-control" required="required" [(ngModel)]="ask.pais">
+  </div> -->
 
   <div class="form-group">
     <button type="submit" class="btn btn-outline-primary puntero" [disabled]="!forma.valid">
-      Guardar cambios
+      Enviar
     </button>
   </div>
 </form>

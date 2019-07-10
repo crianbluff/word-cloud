@@ -1,51 +1,18 @@
-<!-- <div class="card-columns mt-3">
-  <div class="card" *ngFor="let item of items | async">
-    <div class="card-body">
-      <h5 class="card-title text-center">
-        {{ item.forma.pelicula }}
-      </h5>
-
-      <h5 class="card-title text-center">
-        {{ item.forma.color }}
-      </h5>
-
-      <h5 class="card-title text-center">
-        {{ item.forma.juego }}
-      </h5>
-
-      <h5 class="card-title text-center">
-        {{ item.forma.pais }}
-      </h5>
-    </div>
-  </div>
-</div> -->
-
-
-
-<!-- <div *ngIf="arr.length == 0" class="card"> -->
-  <!-- <h1 class="center">
-    No se encuentran palabras
-  </h1> -->
-<!-- </div> -->
-
-<!-- <div *ngIf="res != null">
-  <div id="chartdiv"></div>
-</div> -->
-
 <div *ngIf="res === false">
   <h3 class="center">
     No se encuentran palabras
   </h3>
 </div>
 
-<div id="chartdiv"></div>
+<div *ngIf="res === true">
+  <h4 style="position: absolute; left: 50%; transform: translateX(-50%); top: 5rem;">
+    ¿Color Favorito?
+  </h4>
 
-<div class="center">
-  <h5 *ngFor="let item of obj" [style.font-size.px]="12 + item.count * 8">
-    <span *ngIf="item.weight > 4">
+  <div id="chartdiv"></div>
+  <div class="list-item">
+    <div *ngFor="let item of obj | filterMinMax">
       {{ item.tag }} - {{ item.weight }}
-    </span>
-  </h5>
+    </div>
+  </div>
 </div>
-
-  

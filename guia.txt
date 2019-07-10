@@ -1,0 +1,5 @@
+Link del formulario => http://cloud.pmk.com.co
+Link para ver todas las palabras => http://cloud.pmk.com.co/#/admin-words
+Link para limpiar las palabras => http://cloud.pmk.com.co/#/remove-words
+
+Nota: Tener en cuenta, una vez limpiado las palabras se debe recargar el link de ver las palabras con ctrl + f5

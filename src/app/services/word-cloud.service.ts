@@ -13,7 +13,7 @@ export class WordCloudService {
       forma
     })
     .then(res => {
-      console.log("Document written with ID: ", res.id);
+      // console.log("Document written with ID: ", res.id);
       this.db.collection('keys').add({
         res: res.id
       })

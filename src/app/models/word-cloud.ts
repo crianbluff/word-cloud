@@ -1,7 +1,7 @@
 export interface wordCloud {
-  pelicula:string;
+  // pelicula:string;
   color:string;
-  juego:string;
-  pais:string;
+  // juego:string;
+  // pais:string;
   key$?:string;
 }

@@ -58,21 +58,20 @@ export class WordsAdminComponent implements OnInit {
     this.itemsCollection = this.afs.collection<wordCloud>('ask');
     this.items = this.itemsCollection.valueChanges();
     this.items.subscribe(res => {
+      this.arr = [];
       this.arrTemp = res;
       this.arrTemp.forEach(el => {
         let color = el.forma.color;
-        let pelicula = el.forma.pelicula;
-        let juego = el.forma.juego;
-        let pais = el.forma.pais;
-        this.arr.push(color, pelicula, juego, pais);
-        // Array.prototype.push.apply();
-        // this.arr.push(el.forma.color, el.forma.pelicula, el.forma.juego, el.forma.pais);
+        // let pelicula = el.forma.pelicula;
+        // let juego = el.forma.juego;
+        // let pais = el.forma.pais;
+        this.arr.push(color);
         this.obj = this.compressArray(this.arr);
       });
       this.cloudWords();
     });
   }
-  
+
   ngOnInit() {
     if ( this.afs.collection<wordCloud>('ask').valueChanges().subscribe(res => {
       if (res.length == 0) {
@@ -99,19 +98,20 @@ export class WordsAdminComponent implements OnInit {
     series.data = this.obj;
     series.dataFields.word = "tag";
     series.dataFields.value = "weight";
-
+    
     series.heatRules.push({
     "target": series.labels.template,
     "property": "fill",
-    "min": am4core.color("#0000CC"),
-    "max": am4core.color("#CC00CC"),
+    "min": am4core.color("#ff5555"),
+    "max": am4core.color("#595959"),
     "dataField": "value"
     });
-
-    let hoverState = series.labels.template.states.create("hover");
-    hoverState.properties.fill = am4core.color("#000000");
     
-  //  document.getElementById('id-36-title').parentElement.remove();
+    let hoverState = series.labels.template.states.create("hover");
+    hoverState.properties.fill = am4core.color("#000000");    
+    series.labels.template.tooltipText = "{tag}:\n[bold]{value}";
+    
+    document.getElementById('id-36-title').parentElement.remove();
   }
 
 }

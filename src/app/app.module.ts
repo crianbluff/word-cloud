@@ -18,6 +18,8 @@ import { WordsComponent } from './components/words/words.component';
 import { WordsAdminComponent } from './components/words-admin/words-admin.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
 import { RemoveWordsComponent } from './components/remove-words/remove-words.component';
+import { FooterComponent } from './components/share/footer/footer.component';
+import { FilterMinMaxPipe } from './pipes/filter-min-max.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { RemoveWordsComponent } from './components/remove-words/remove-words.com
     WordsComponent,
     WordsAdminComponent,
     NavbarComponent,
-    RemoveWordsComponent
+    RemoveWordsComponent,
+    FooterComponent,
+    FilterMinMaxPipe
   ],
 
   imports: [

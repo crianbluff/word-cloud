@@ -1,4 +1,27 @@
 #chartdiv {
-  width: 100%;
-  height: 600px;
+  margin-top: 3rem;
+  min-width: 900px;
+  min-height: 600px;
+  transform: scale(0.7);
+}
+
+.list-item {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  height: 81vh;
+  background-color: #cdcdcd;
+  padding: 1em;
+}
+
+.list-item i {
+  color: #ff5555;
+}
+
+@media screen and (max-width: 901px) {
+  #chartdiv {
+    min-width: 90%;
+    min-height: 500px;
+    padding-left: 4em;
+  }
 }
