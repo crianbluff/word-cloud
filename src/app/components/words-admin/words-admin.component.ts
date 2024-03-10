@@ -57,14 +57,12 @@ export class WordsAdminComponent implements OnInit {
   loadWorks() {
     this.itemsCollection = this.afs.collection<wordCloud>('ask');
     this.items = this.itemsCollection.valueChanges();
+
     this.items.subscribe(res => {
       this.arr = [];
       this.arrTemp = res;
       this.arrTemp.forEach(el => {
         let color = el.forma.color;
-        // let pelicula = el.forma.pelicula;
-        // let juego = el.forma.juego;
-        // let pais = el.forma.pais;
         this.arr.push(color);
         this.obj = this.compressArray(this.arr);
       });
@@ -100,17 +98,18 @@ export class WordsAdminComponent implements OnInit {
     series.dataFields.value = "weight";
     
     series.heatRules.push({
-    "target": series.labels.template,
-    "property": "fill",
-    "min": am4core.color("#ff5555"),
-    "max": am4core.color("#595959"),
-    "dataField": "value"
+      "target": series.labels.template,
+      "property": "fill",
+      "min": am4core.color("#ff5555"),
+      "max": am4core.color("#595959"),
+      "dataField": "value"
     });
     
+
     let hoverState = series.labels.template.states.create("hover");
-    hoverState.properties.fill = am4core.color("#000000");    
+    hoverState.properties.fill = am4core.color("#000000");
     series.labels.template.tooltipText = "{tag}:\n[bold]{value}";
-    
+
     document.getElementById('id-36-title').parentElement.remove();
   }
 

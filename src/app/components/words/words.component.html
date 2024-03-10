@@ -1,43 +1,21 @@
 <h4 class="center title-form">
-Responde la pregunta y haz clic en enviar.
+  Answer the question and submit it.
 </h4>
 
 <form (ngSubmit)="enviar()" #forma="ngForm">
-  <!-- <div class="form-group">
-    <label for="pelicula">
-      ¿Cuál es tu película favorita?
-    </label>
-    <i class="fa fa-pencil"></i>
-    <input type="text" name="pelicula" id="pelicula" class="form-control" required="required" [(ngModel)]="ask.pelicula">
-  </div> -->
 
   <div class="form-group">
     <label for="color">
-      ¿Cuál es tu color favorito?
+      What is your favorite color?
     </label>
+    
     <i class="fa fa-pencil"></i>
     <input type="text" name="color" id="color" class="form-control" required="required" [(ngModel)]="ask.color">
   </div>
 
-  <!-- <div class="form-group">
-    <label for="juego">
-      ¿Cuál es tu juego favorito?
-    </label>
-    <i class="fa fa-pencil"></i>
-    <input type="text" name="juego" id="juego" class="form-control" required="required" [(ngModel)]="ask.juego">
-  </div>
-
-  <div class="form-group">
-    <label for="pais">
-      ¿En qué país te encuentras?
-    </label>
-    <i class="fa fa-pencil"></i>
-    <input type="text" name="pais" id="pais" class="form-control" required="required" [(ngModel)]="ask.pais">
-  </div> -->
-
   <div class="form-group">
     <button type="submit" class="btn btn-outline-primary puntero" [disabled]="!forma.valid">
-      Enviar
+      Send
     </button>
   </div>
 </form>

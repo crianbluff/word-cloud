@@ -27,7 +27,7 @@ export class RemoveWordsComponent implements OnInit {
     });
   }
 
-  limpiar() {
+  clean() {
     for ( this.temp in this.objKeys ) {
       let keys = this.objKeys[this.temp].res;
       this.afs.collection('ask').doc(keys).delete()
@@ -39,7 +39,7 @@ export class RemoveWordsComponent implements OnInit {
       });
     }
 
-    this.MostrarMsg('Limpiado');
+    this.MostrarMsg('Everything was cleaned successfully');
   
   }
 

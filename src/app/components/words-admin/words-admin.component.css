@@ -9,7 +9,7 @@
   position: absolute;
   top: 70px;
   left: 0;
-  height: 81vh;
+  height: calc(100vh - 70px);
   background-color: #cdcdcd;
   padding: 1em;
 }

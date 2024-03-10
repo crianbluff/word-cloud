@@ -11,10 +11,7 @@ import Swal from 'sweetalert2';
 export class WordsComponent implements OnInit {
 
   public ask:wordCloud = {
-    // pelicula: '',
     color: '',
-    // juego: '',
-    // pais: '',
   };
 
   temp;
@@ -40,15 +37,13 @@ export class WordsComponent implements OnInit {
     for ( this.temp in this.ask ) {
       this.ask[this.temp] = this.ask[this.temp].toUpperCase().trim();
     }
-    // console.log(this.ask);
+
     this.wordService.getWords(this.ask);
     this.ask = {
-      // pelicula: '',
       color: '',
-      // juego: '',
-      // pais: '',
     };
-    this.MostrarMsg('Enviado');
+    
+    this.MostrarMsg('Sent Successfully');
   }
 
 }

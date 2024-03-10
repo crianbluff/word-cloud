@@ -1,18 +1,23 @@
 <div *ngIf="res === false">
   <h3 class="center">
-    No se encuentran palabras
+    There are no words
   </h3>
 </div>
 
 <div *ngIf="res === true">
   <h4 style="position: absolute; left: 50%; transform: translateX(-50%); top: 5rem;">
-    ¿Color Favorito?
+    Favorite Color?
   </h4>
 
   <div id="chartdiv"></div>
+
   <div class="list-item">
     <div *ngFor="let item of obj | filterMinMax">
-      {{ item.tag }} - {{ item.weight }}
+      <div [style.font-size.px]="8 + item.weight">
+        <span>{{ item.tag }}</span>
+        <span> - </span>
+        <span style="text-shadow: 0 0 0 #000000;" [style.color]="item ? item.tag : '#000000'"> {{ item.weight }} </span>
+      </div>
     </div>
   </div>
 </div>

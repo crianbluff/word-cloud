@@ -5,7 +5,9 @@
 }
 
 body {
-  /* background-image: url('assets/img/background.jpg'); */
+  background-image: url('assets/img/background.jpg');
+  background-size: 100%;
+  width: 100%;
   font-family: 'dinpro', sans-serif !important;
 }
 
@@ -64,10 +66,6 @@ header {
 header a:first-child {
   color: #ff5555 !important;
   font-size: 3rem;
-}
-
-header img {
-  max-width: 70px !important;
 }
 
 .main {
