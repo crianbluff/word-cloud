@@ -1,0 +1,35 @@
+<!Doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>WordCloud</title>
+    <base href="C:/Program Files/Git/word-cloud/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+
+  <body>
+
+    <app-root></app-root>
+
+    <script>
+
+        window.addEventListener("hashchange", function() { change() }, false);
+        window.addEventListener("click", function() { change() }, false);
+        
+        function change() {
+          setTimeout(function(){
+            if ( window.location.hash === '#/words' ) {
+              document.body.style.backgroundImage = "url('assets/img/background.jpg')";
+            } else {
+                return;
+              }
+      
+          }, 100);
+        }
+          
+        (change) ();
+          
+      </script>
+  <script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="es2015-polyfills.js" nomodule></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="scripts.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>
